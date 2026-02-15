@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Love Anu(potti) ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    background: linear-gradient(-45deg, #1a001f, #330033, #660033, #99004d);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    color:white;
+    overflow-x:hidden;
+}
+
+@keyframes gradientBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero h1{
+    font-family:'Playfair Display', serif;
+    font-size:70px;
+    letter-spacing:2px;
+    background:linear-gradient(to right,#ff99cc,#ffffff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+    margin:20px 0;
+    font-size:20px;
+    opacity:0.9;
+}
+
+.premium-btn{
+    padding:14px 35px;
+    border-radius:50px;
+    border:2px solid #ff4da6;
+    background:transparent;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+.premium-btn:hover{
+    background:#ff4da6;
+    box-shadow:0 0 25px #ff4da6;
+}
+
+/* LOVE LETTER SECTION */
+.section{
+    padding:100px 20px;
+    display:flex;
+    justify-content:center;
+}
+
+.glass-card{
+    max-width:700px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(15px);
+    padding:50px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 0 40px rgba(255,0,100,0.3);
+}
+
+.glass-card h2{
+    font-family:'Playfair Display', serif;
+    margin-bottom:20px;
+    font-size:40px;
+}
+
+.glass-card p{
+    font-size:18px;
+    line-height:1.8;
+    opacity:0.9;
+}
+
+/* PROPOSAL */
+.proposal{
+    text-align:center;
+    padding:100px 20px;
+}
+
+.proposal h2{
+    font-size:45px;
+    margin-bottom:40px;
+}
+
+.proposal button{
+    margin:10px;
+}
+
+/* Floating Hearts */
+.heart{
+    position:fixed;
+    bottom:-20px;
+    font-size:20px;
+    animation: float 6s linear infinite;
+}
+
+@keyframes float{
+    0%{transform:translateY(0); opacity:1;}
+    100%{transform:translateY(-110vh); opacity:0;}
+}
+#btn{
+    display: flex;
+    justify-content: center;
+}
+#btn2{
+    margin-bottom: 100px;
+    
+}
+.verify-content{
+    display: flex;
+    justify-content: center;
+      text-decoration: none;
+  
+}
+
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>To The Love Of My Life ❤️</h1>
+    <p>You are my today and all of my tomorrows.</p>
+    <button class="premium-btn" onclick="scrollToLetter()">Read My Heart 💌</button>
+</section>
+
+<!-- LOVE LETTER -->
+<section class="section" id="letter">
+    <div class="glass-card">
+        <h2>My Love Letter To My Potti</h2>
+        <p>
+        Anu From the moment you entered my life, everything changed beautifully.
+        You are my happiness, my strength, and my forever.
+        Every heartbeat whispers your name.
+        I am grateful for you today, tomorrow, and always.Love You Anu(potti).❤️
+        </p>
+    </div>
+</section>
+
+<!-- PROPOSAL -->
+<section class="proposal">
+    <h2>Will You Be Mine Forever? 💍</h2>
+    <button class="premium-btn" onclick="celebrate()">YES ❤️</button>
+    <button class="premium-btn" onclick="celebrate()">ALWAYS ❤️</button>
+</section>
+
+
+ <a href="login.html" class="verify-content">
+    <button class="premium-btn" id="btn2">
+   Our Memories...
+</button>
+ </a>
+<script>
+
+function scrollToLetter(){
+    document.getElementById("letter").scrollIntoView({behavior:"smooth"});
+}
+function celebrate(){
+    alert("You just made me the happiest person alive ❤️");
+
+    for(let i=0;i<40;i++){
+        let heart=document.createElement("div");
+        heart.classList.add("heart");
+        heart.innerHTML="💖";
+        heart.style.left=Math.random()*100+"vw";
+        heart.style.fontSize=(Math.random()*25+15)+"px";
+        heart.style.animationDuration=(Math.random()*3+3)+"s";
+        document.body.appendChild(heart);
+
+        setTimeout(()=>{heart.remove();},6000);
+    }
+}
+</script>
+
+</body>
+</html>
